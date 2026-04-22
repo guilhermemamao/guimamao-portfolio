@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="420" viewBox="0 0 1440 420">
+  <defs>
+    <!-- Grid de pontos -->
+    <pattern id="dots" x="0" y="0" width="32" height="32" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#ffffff" opacity="0.35"/>
+    </pattern>
+
+    <!-- Grid de linhas finas -->
+    <pattern id="grid" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M 80 0 L 0 0 0 80" fill="none" stroke="#ffffff" stroke-width="0.4" opacity="0.12"/>
+    </pattern>
+  </defs>
+
+  <!-- Fundo grid -->
+  <rect width="1440" height="420" fill="url(#grid)"/>
+  <rect width="1440" height="420" fill="url(#dots)"/>
+
+  <!-- Círculo grande — canto esquerdo -->
+  <circle cx="120" cy="210" r="260" fill="none" stroke="#ffef3d" stroke-width="1" opacity="0.25"/>
+  <circle cx="120" cy="210" r="180" fill="none" stroke="#ffef3d" stroke-width="0.5" opacity="0.15"/>
+
+  <!-- Círculo grande — canto direito -->
+  <circle cx="1340" cy="80" r="320" fill="none" stroke="#ffffff" stroke-width="0.8" opacity="0.1"/>
+  <circle cx="1340" cy="80" r="200" fill="none" stroke="#ffef3d" stroke-width="0.5" opacity="0.18"/>
+
+  <!-- Círculo médio — centro-direita -->
+  <circle cx="900" cy="380" r="190" fill="none" stroke="#ffffff" stroke-width="0.6" opacity="0.08"/>
+
+  <!-- Linhas diagonais longas -->
+  <line x1="0" y1="420" x2="520" y2="0" stroke="#ffef3d" stroke-width="0.6" opacity="0.2"/>
+  <line x1="80" y1="420" x2="600" y2="0" stroke="#ffffff" stroke-width="0.4" opacity="0.08"/>
+  <line x1="1440" y1="0" x2="880" y2="420" stroke="#ffef3d" stroke-width="0.5" opacity="0.15"/>
+
+  <!-- Retângulos / frames de design -->
+  <rect x="580" y="60" width="280" height="160" fill="none" stroke="#ffef3d" stroke-width="0.7" opacity="0.12"/>
+  <rect x="596" y="76" width="248" height="128" fill="none" stroke="#ffef3d" stroke-width="0.4" opacity="0.07"/>
+
+  <!-- Marcas de régua no topo -->
+  <line x1="0" y1="0" x2="1440" y2="0" stroke="#ffffff" stroke-width="0.5" opacity="0.15"/>
+  <line x1="0" y1="420" x2="1440" y2="420" stroke="#ffffff" stroke-width="0.5" opacity="0.08"/>
+
+  <!-- Ticks de régua -->
+  <g stroke="#ffffff" stroke-width="0.5" opacity="0.2">
+    <line x1="160" y1="0" x2="160" y2="10"/>
+    <line x1="320" y1="0" x2="320" y2="6"/>
+    <line x1="480" y1="0" x2="480" y2="10"/>
+    <line x1="640" y1="0" x2="640" y2="6"/>
+    <line x1="800" y1="0" x2="800" y2="10"/>
+    <line x1="960" y1="0" x2="960" y2="6"/>
+    <line x1="1120" y1="0" x2="1120" y2="10"/>
+    <line x1="1280" y1="0" x2="1280" y2="6"/>
+  </g>
+
+  <!-- Ponto de origem / cursor -->
+  <circle cx="580" cy="60" r="4" fill="none" stroke="#ffef3d" stroke-width="1" opacity="0.5"/>
+  <line x1="574" y1="60" x2="560" y2="60" stroke="#ffef3d" stroke-width="0.8" opacity="0.5"/>
+  <line x1="580" y1="54" x2="580" y2="40" stroke="#ffef3d" stroke-width="0.8" opacity="0.5"/>
+
+  <!-- Cruz de alinhamento — direita -->
+  <line x1="1160" y1="290" x2="1200" y2="290" stroke="#ffef3d" stroke-width="0.8" opacity="0.3"/>
+  <line x1="1180" y1="270" x2="1180" y2="310" stroke="#ffef3d" stroke-width="0.8" opacity="0.3"/>
+  <circle cx="1180" cy="290" r="12" fill="none" stroke="#ffef3d" stroke-width="0.6" opacity="0.2"/>
+
+  <!-- Arco de Bézier decorativo -->
+  <path d="M 200 420 C 400 200 650 320 860 100" fill="none" stroke="#ffef3d" stroke-width="0.8" opacity="0.18" stroke-dasharray="4 6"/>
+  <circle cx="200" cy="420" r="3" fill="#ffef3d" opacity="0.3"/>
+  <circle cx="860" cy="100" r="3" fill="#ffef3d" opacity="0.3"/>
+
+  <!-- Fade lateral esquerdo e direito para suavizar -->
+  <defs>
+    <linearGradient id="fadeL" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0e0e0e" stop-opacity="1"/>
+      <stop offset="18%" stop-color="#0e0e0e" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="fadeR" x1="100%" y1="0%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#0e0e0e" stop-opacity="0.6"/>
+      <stop offset="25%" stop-color="#0e0e0e" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="fadeB" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="60%" stop-color="#0e0e0e" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#0e0e0e" stop-opacity="0.8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1440" height="420" fill="url(#fadeL)"/>
+  <rect width="1440" height="420" fill="url(#fadeR)"/>
+  <rect width="1440" height="420" fill="url(#fadeB)"/>
+</svg>
