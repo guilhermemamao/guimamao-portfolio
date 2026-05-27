@@ -933,6 +933,13 @@ footer p {
   transition: border-color var(--transition);
 }
 
+a.projeto-foto-link {
+  display: block;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
 .projeto-foto-card:hover {
   border-color: var(--accent);
 }
