@@ -1,16 +1,28 @@
-cap<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projetos — Guilherme Mamão</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <script>
+    (function() {
+      var t = localStorage.getItem('theme') || 'light';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
 </head>
 <body>
 
   <!-- NAVEGAÇÃO -->
   <nav id="navbar">
-    <a href="index.html" class="logo">GM</a>
+    <div class="navbar-brand">
+      <a href="index.html" class="logo">GM</a>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Ativar modo escuro">☾</button>
+    </div>
     <ul>
       <li><a href="index.html#sobre">Sobre</a></li>
       <li><a href="index.html#skills">Skills</a></li>
@@ -32,7 +44,7 @@ cap<!DOCTYPE html>
     </div>
     <div class="container">
       <p class="section-label">Projetos</p>
-      <h1>TRABALHOS <span class="accent">SELECIONADOS</span></h1>
+      <h1>TRABALHOS<br /><span class="accent">SELECIONADOS</span></h1>
       <p class="projetos-hero-desc">Uma seleção de projetos que refletem minha trajetória em branding, social media e gestão criativa.</p>
     </div>
   </section>
@@ -185,10 +197,10 @@ cap<!DOCTYPE html>
         Aberto a projetos freelance, colaborações e oportunidades.<br />
         <span class="contato-local">BH/MG · guilhermemamaopq@gmail.com</span>
       </p>
-      <a href="https://wa.me/5531993179053?text=Ola%20Guilherme%2C%20adorei%20seu%20portf%C3%B3ilio%20digital%2C%20podemos%20conversar%3F" target="_blank" class="btn">Enviar mensagem</a>
       <div class="social-links">
-        <a href="https://www.behance.net/guilhermemamo" target="_blank">Behance</a>
-        <a href="https://instagram.com/guilhermemamao" target="_blank">Instagram</a>
+        <a href="https://wa.me/5531993179053?text=Ola%20Guilherme%2C%20adorei%20seu%20portf%C3%B3ilio%20digital%2C%20podemos%20conversar%3F" target="_blank" class="btn">Enviar mensagem</a>
+        <a href="https://www.behance.net/guilhermemamo" target="_blank" class="btn btn-outline-light">Behance</a>
+        <a href="https://instagram.com/guilhermemamao" target="_blank" class="btn btn-outline-light">Instagram</a>
       </div>
     </div>
   </section>

@@ -1,3 +1,24 @@
+// Tema: o padrão é LIGHT; o visitante pode trocar para dark (fica salvo no navegador)
+const themeToggle = document.getElementById('theme-toggle');
+
+function applyTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  if (themeToggle) {
+    themeToggle.textContent = theme === 'dark' ? '☀' : '☾';
+    themeToggle.setAttribute('aria-label', theme === 'dark' ? 'Ativar modo claro' : 'Ativar modo escuro');
+  }
+}
+
+// Inicializa com o tema salvo (o inline script já aplicou o data-theme,
+// aqui apenas sincronizamos o ícone)
+applyTheme(localStorage.getItem('theme') || 'light');
+
+themeToggle?.addEventListener('click', () => {
+  const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+  localStorage.setItem('theme', next);
+  applyTheme(next);
+});
+
 // Navbar: fundo ao rolar
 const navbar = document.getElementById('navbar');
 
